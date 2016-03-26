@@ -1,0 +1,5 @@
+name = Custom Views Title Callback
+description = "Module to test views_title_callback."
+core = 7.x
+dependencies[] = views_title_callback
+package = Other

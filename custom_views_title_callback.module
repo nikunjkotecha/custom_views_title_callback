@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Module file for custom_views_title_callback.
+ */
+
+function test_title_callback() {
+  if (isset($_GET['field_tags_tid'])) {
+    $tag = taxonomy_term_load($_GET['field_tags_tid']);
+    if ($tag) {
+      return t('Articles with the tag !tag', array('!tag' => $tag->name));
+    }
+  }
+
+  return t('Articles list');
+}
